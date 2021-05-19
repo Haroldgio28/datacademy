@@ -7,6 +7,7 @@ Ejemplo:
 
 ppt(“piedra”, “papel”) ➞ “El ganador es el jugador 2'''
 
+import random
     
 def ppt():
     contador1=0
@@ -14,7 +15,8 @@ def ppt():
 
     while True: 
         p1=int(input('jugador 1-Introduce un número (1-piedra,2-papel,3-tijera): '))
-        p2=int(input('jugador 2-Introduce un número (1-piedra,2-papel,3-tijera): '))
+        p2=int(random.randint(1,3))
+        print('maquina: ',p2)
         
         
         if p1==p2:
@@ -22,7 +24,7 @@ def ppt():
             print("Jugador 1: ",contador1)
             print("Jugador 2: ",contador2)
         elif (p1==1 and p2==2) or (p1==2 and p2==3) or (p1==3 and p2==1):
-            print('Gana jugador 2')
+            print('Gana maquina')
             contador2+=1
             print("Jugador 1: ",contador1)
             print("Jugador 2: ",contador2)
@@ -32,13 +34,13 @@ def ppt():
             print("Jugador 1: ",contador1)
             print("Jugador 2: ",contador2)
         
-        if contador1<3 and contador2<3:
+        if contador1<2 and contador2<2:
             continue
-        elif contador1==3:
+        elif contador1==2:
             print('El jugador 1 gana')
             break
-        elif contador2==3:
-            print('El jugador 2 gana')
+        elif contador2==2:
+            print('La maquina gana la partida')
             break 
         
 if __name__=='__main__':
