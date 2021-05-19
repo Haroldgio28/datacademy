@@ -1,2 +1,2 @@
 # datacademy
-Este es el repositorio del reto datacademy de Platazi
+Este es el repositorio del reto datacademy de Platzi
