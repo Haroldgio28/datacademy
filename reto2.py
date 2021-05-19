@@ -18,6 +18,7 @@ def run():
 def ppt(p1,p2):
     contador1=0
     contador2=0
+
     if p1==p2:
         print('Empate')
     elif (p1==1 and p2==2) or (p1==2 and p2==3) or (p1==3 and p2==1):
@@ -26,7 +27,15 @@ def ppt(p1,p2):
     else:
         print('Gana jugador 1')
         contador1=+1
-    print(contador1,contador2)
+           
+
+    # if contador1==3:
+    #     print('Gana jugador 1')
+    # else:
+    #     print ('Gana jugador 2') 
+          
+    print("Jugador 1: ",contador1)
+    print("Jugador 2:",contador2)
 
 if __name__=='__main__':
     run()
