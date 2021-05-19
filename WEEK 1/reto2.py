@@ -7,35 +7,39 @@ Ejemplo:
 
 ppt(“piedra”, “papel”) ➞ “El ganador es el jugador 2'''
 
-def run():
     
-    p1=int(input('jugador 1-Introduce un número (1-piedra,2-papel,3-tijera): '))
-    p2=int(input('jugador 2-Introduce un número (1-piedra,2-papel,3-tijera): '))
-    ppt(p1,p2)
-    
-
-    
-def ppt(p1,p2):
+def ppt():
     contador1=0
-    contador2=0
+    contador2=0 
 
-    if p1==p2:
-        print('Empate')
-    elif (p1==1 and p2==2) or (p1==2 and p2==3) or (p1==3 and p2==1):
-        print('Gana jugador 2')
-        contador2=+1
-    else:
-        print('Gana jugador 1')
-        contador1=+1
-           
-
-    # if contador1==3:
-    #     print('Gana jugador 1')
-    # else:
-    #     print ('Gana jugador 2') 
-          
-    print("Jugador 1: ",contador1)
-    print("Jugador 2:",contador2)
-
+    while True: 
+        p1=int(input('jugador 1-Introduce un número (1-piedra,2-papel,3-tijera): '))
+        p2=int(input('jugador 2-Introduce un número (1-piedra,2-papel,3-tijera): '))
+        
+        
+        if p1==p2:
+            print('Empate')
+            print("Jugador 1: ",contador1)
+            print("Jugador 2: ",contador2)
+        elif (p1==1 and p2==2) or (p1==2 and p2==3) or (p1==3 and p2==1):
+            print('Gana jugador 2')
+            contador2+=1
+            print("Jugador 1: ",contador1)
+            print("Jugador 2: ",contador2)
+        else:
+            print('Gana jugador 1')
+            contador1+=1
+            print("Jugador 1: ",contador1)
+            print("Jugador 2: ",contador2)
+        
+        if contador1<3 and contador2<3:
+            continue
+        elif contador1==3:
+            print('El jugador 1 gana')
+            break
+        elif contador2==3:
+            print('El jugador 2 gana')
+            break 
+        
 if __name__=='__main__':
-    run()
+    ppt()
