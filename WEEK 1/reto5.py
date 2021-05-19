@@ -9,10 +9,10 @@ En caso de estar por debajo del inferior o arriba del superior, también muéstr
 def run():
     liminf=int(input("Ingresa el límite inferior: "))
     limsup=int(input("Ingresa el límite superior: "))
-    comparat=int(input('Ingresar el número a comparar: '))
+    comparat=int(input('Ingresa el número a comparar: '))
 
     if liminf>limsup:
-        print('El límite inferior es mayor que el límite superior, por favor ingrese de nuevo los límites.')
+        print('El límite inferior es mayor que el límite superior, por favor ingresa de nuevo los límites.')
         liminf=int(input("Ingresa el límite inferior: "))
         limsup=int(input("Ingresa el límite superior: "))
           
@@ -21,7 +21,7 @@ def run():
         
         if comparat<liminf or comparat>limsup:
             print('El número ', comparat,' está fuera de los límites indicados')
-            comparat=int(input('Ingrese un número dentro de los límites: '))
+            comparat=int(input('Ingresa un número dentro de los límites: '))
             continue
         else:
             print('El número ', comparat, ' está en los límites indicados')
